@@ -2,7 +2,7 @@ import React, { PureComponent, useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const loadItem = setColumns => {
-  fetch("https://api.github.com/repos/Alexandr1809/alexand/issues")
+  fetch("https://api.github.com/repos/Alexandr1809/boganov/issues")
     .then(response => response.json())
     .then(data => data.map(item => ({ id: `${item.number}`, content: item.title, data, state: item.state })))
     .then(data => {      
@@ -27,7 +27,7 @@ const loadItem = setColumns => {
 };
 
 const updateItem = (issue_number, state) => {
-  fetch(`https://api.github.com/repos/Alexandr1809/alexand/issues/${issue_number}`, {
+  fetch(`https://api.github.com/repos/Alexandr1809/boganov/issues/${issue_number}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
