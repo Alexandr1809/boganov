@@ -31,7 +31,7 @@ const updateItem = (issue_number, state) => {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Basic ${btoa('Alexandr1809' + ':' + "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")}`
+      "Authorization": `Basic ${btoa('Alexandr1809' + ':' + "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")}`
     },
     body: JSON.stringify({
       "owner": "garlife",
